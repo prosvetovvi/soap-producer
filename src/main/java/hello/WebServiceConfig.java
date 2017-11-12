@@ -38,10 +38,10 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return securityInterceptor;
 	}
 
-//	@Override
-//	public void addInterceptors(List interceptors) {
-//		interceptors.add(securityInterceptor());
-//	}
+	@Override
+	public void addInterceptors(List interceptors) {
+		interceptors.add(securityInterceptor());
+	}
 
 	@Bean
 	public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
